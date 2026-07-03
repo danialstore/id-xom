@@ -10,7 +10,7 @@ app.post('/report', async (req, res) => {
     const { profileUrl, reason, cookies } = req.body;
     try {
         let username = profileUrl.match(/@([\w.]+)/)?.[1] || profileUrl.split('@').pop().split('?')[0];
-        const reportUrl = `https://www.tiktok.com/aweme/v2/aweme/feedback/?aid=1988&report_type=1&object_id=${username}&reason=${reason}`;
+        const reportUrl = 'https://www.tiktok.com/aweme/v2/aweme/feedback/?aid=1988&report_type=1&object_id=${username}&reason=${reason}';
 
         const response = await fetch(reportUrl, {
             method: 'GET',
