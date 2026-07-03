@@ -15,9 +15,17 @@ app.post('/report', async (req, res) => {
         const response = await fetch(reportUrl, {
             method: 'GET',
             headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36',
+                'Host: www.tiktok.com',
+                'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36',
+                'Accept-Encoding: gzip, deflate, br, zstd',
+                'tiktok: S9SjsV7aAkR_Rfdjmx8qD3T7PGzRcKcxp9NPHQeVsmuXz6PyhuLmEd0_vZtu1Y1SvY0MCR3-w-S_-pLPyB_u-M63XxqR7YGFcgk57p9T-l5KQD7RV5348v4LQUOLywVKu8robwlY6JMS42D8lQqRYfYlPFXp',
+                'sec-fetch-dest: empty',
+                'sec-fetch-site: same-origin',
+                'sec-fetch-mode: cors',
+                'accept-language: en-US,en;q=0.9',
+                'priority: u=3, i',
                 'Cookie': cookies || '',
-                'Referer': 'https://www.tiktok.com/'
+                
             }
         });
 
