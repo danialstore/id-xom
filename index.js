@@ -15,7 +15,6 @@ app.post('/report', async (req, res) => {
         const response = await fetch(reportUrl, {
             method: 'GET',
             headers: {
-                'Refeer: www.tiktok.com',
                 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36',
                 'Accept-Encoding: gzip, deflate, br, zstd',
                 'sec-fetch-dest: empty',
