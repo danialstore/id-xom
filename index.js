@@ -16,12 +16,6 @@ app.post('/report', async (req, res) => {
             method: 'GET',
             headers: {
                 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36',
-                'Accept-Encoding: gzip, deflate, br, zstd',
-                'sec-fetch-dest: empty',
-                'sec-fetch-site: same-origin',
-                'sec-fetch-mode: cors',
-                'accept-language: en-US,en;q=0.9',
-                'priority: u=3, i',
                 'Cookie': cookies || '',
                 'Referer': 'https://www.tiktok.com/'
                 
