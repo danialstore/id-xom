@@ -23,6 +23,7 @@ app.post('/report', async (req, res) => {
                 'accept-language: en-US,en;q=0.9',
                 'priority: u=3, i',
                 'Cookie': cookies || '',
+                'Referer': 'https://www.tiktok.com/'
                 
             }
         });
