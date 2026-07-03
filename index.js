@@ -10,14 +10,21 @@ app.post('/report', async (req, res) => {
     const { profileUrl, reason, cookies } = req.body;
     try {
         let username = profileUrl.match(/@([\w.]+)/)?.[1] || profileUrl.split('@').pop().split('?')[0];
-        const reportUrl = `https://www.tiktok.com/aweme/v2/aweme/feedback/?aid=1988&report_type=1&object_id=${username}&reason=${reason}`;
+        const reportUrl = 'https://www.tiktok.com/aweme/v2/aweme/feedback/?aid=1988&report_type=1&object_id=${username}&reason=${reason}';
 
         const response = await fetch(reportUrl, {
             method: 'GET',
             headers: {
-                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)',
+                'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36',
+                'Accept-Encoding: gzip, deflate, br, zstd',
+                'sec-fetch-dest: empty',
+                'sec-fetch-site: same-origin',
+                'sec-fetch-mode: cors',
+                'accept-language: en-US,en;q=0.9',
+                'priority: u=3, i',
                 'Cookie': cookies || '',
                 'Referer': 'https://www.tiktok.com/'
+                
             }
         });
 
